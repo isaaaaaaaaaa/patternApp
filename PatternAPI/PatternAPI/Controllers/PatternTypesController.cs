@@ -6,12 +6,12 @@ using PatternsAPI.DAL.Context;
 namespace PatternAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class PatternTypeController : ControllerBase
+    [Route("api/[controller]")]
+    public class PatternTypesController : ControllerBase
     {
-        private readonly ILogger<PatternTypeController> _logger;
+        private readonly ILogger<PatternTypesController> _logger;
         private PatternsContext _ctx;
-        public PatternTypeController(ILogger<PatternTypeController> logger, PatternsContext ctx)
+        public PatternTypesController(ILogger<PatternTypesController> logger, PatternsContext ctx)
         {
             _logger = logger;
             _ctx = ctx;

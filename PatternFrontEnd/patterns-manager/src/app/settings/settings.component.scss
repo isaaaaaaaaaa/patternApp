@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+@import "../../assets/styles/pm-theme-definition.scss";
+mat-icon {
+  font-size: 7em;
+  color:white;
+  width: auto;
+  height: auto;
+}
+
+.icon-circle {
+  border-radius: 100px;
+  background: mat-color($pm-primary);
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+}

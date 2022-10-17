@@ -5,12 +5,12 @@ using PatternsAPI.Models;
 namespace PatternsAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class ValueDomainValueController : ControllerBase
+    [Route("api/[controller]")]
+    public class ValueDomainValuesController : ControllerBase
     {
-        private readonly ILogger<ValueDomainValueController> _logger;
+        private readonly ILogger<ValueDomainValuesController> _logger;
         private PatternsContext _ctx;
-        public ValueDomainValueController(ILogger<ValueDomainValueController> logger, PatternsContext ctx)
+        public ValueDomainValuesController(ILogger<ValueDomainValuesController> logger, PatternsContext ctx)
         {
             _logger = logger;
             _ctx = ctx;

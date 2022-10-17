@@ -5,12 +5,12 @@ using PatternsAPI.Models;
 namespace PatternsAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class PatternController : ControllerBase
+    [Route("api/[controller]")]
+    public class PatternsController : ControllerBase
     {
-        private readonly ILogger<PatternController> _logger;
+        private readonly ILogger<PatternsController> _logger;
         private PatternsContext _ctx;
-        public PatternController(ILogger<PatternController> logger, PatternsContext ctx)
+        public PatternsController(ILogger<PatternsController> logger, PatternsContext ctx)
         {
             _logger = logger;
             _ctx = ctx;
