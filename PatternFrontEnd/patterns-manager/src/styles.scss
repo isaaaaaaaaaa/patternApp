@@ -1,0 +1,70 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use 'sass:map';
+@import '/src/assets/styles/pm-theme.scss';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$pm-front-end-primary: mat.define-palette($pm-primary);
+$pm-front-end-accent: mat.define-palette($pm-accent, 500, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$pm-front-end-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$pm-front-end-theme: mat.define-light-theme((
+  color: (
+    primary: $pm-front-end-primary,
+    accent: $pm-front-end-accent,
+    warn: $pm-front-end-warn,
+  )
+));
+
+@include mat.all-component-themes($pm-front-end-theme);
+
+
+$dark-primary: mat.define-palette($pm-primary);
+$dark-accent: mat.define-palette($pm-accent);
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+    ),
+  )
+);
+
+.darkMode {
+  @include mat.all-component-colors($dark-theme);
+}
+
+@font-face {
+  font-family: 'Delius Swash Caps';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/fonts/delius-swash-caps-v19-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../src/assets/fonts/delius-swash-caps-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../src/assets/fonts/delius-swash-caps-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../src/assets/fonts/delius-swash-caps-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../src/assets/fonts/delius-swash-caps-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../src/assets/fonts/delius-swash-caps-v19-latin-regular.svg#DeliusSwashCaps') format('svg'); /* Legacy iOS */
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spacer {
+	flex: 1 1 auto;
+}

@@ -1,0 +1,123 @@
+@import '~@angular/material/theming';
+
+/* For use in src/lib/core/theming/_palette.scss */
+$mat-pm-primary: (
+  50 : #fceaee,
+  100 : #f9c9d4,
+  200 : #f5a6b7,
+  300 : #f0829a,
+  400 : #ed6785,
+  500 : #ea4c6f,
+  600 : #e74567,
+  700 : #e43c5c,
+  800 : #e13352,
+  900 : #db2440,
+  A100 : #ffffff,
+  A200 : #ffe2e6,
+  A400 : #ffafba,
+  A700 : #ff96a4,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-pm-accent: (
+  50 : #eafcf7,
+  100 : #c9f9ea,
+  200 : #a6f5dc,
+  300 : #82f0ce,
+  400 : #67edc4,
+  500 : #4ceab9,
+  600 : #45e7b2,
+  700 : #3ce4aa,
+  800 : #33e1a2,
+  900 : #24db93,
+  A100 : #ffffff,
+  A200 : #e2fff3,
+  A400 : #afffde,
+  A700 : #96ffd3,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-pm-warn: (
+  50 : #f5e0e6,
+    100 : #e5b3c0,
+    200 : #d48096,
+    300 : #c34d6c,
+    400 : #b6264d,
+    500 : #a9002d,
+    600 : #a20028,
+    700 : #980022,
+    800 : #8f001c,
+    900 : #7e0011,
+    A100 : #ffacb1,
+    A200 : #ff7981,
+    A400 : #ff4651,
+    A700 : #ff2c39,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Define a theme.
+$pm-primary: mat-palette($mat-pm-primary);
+$pm-accent:  mat-palette($mat-pm-accent);
+$pm-warn:  mat-palette($mat-pm-warn);
+
+
+$pm-theme: mat-dark-theme((
+  color: (
+    primary: $pm-primary,
+    accent: $pm-accent,
+    warning: $pm-warn
+  )
+));
+
+$pm-theme: mat-light-theme((
+  color: (
+    primary: $pm-primary,
+    accent: $pm-accent,
+    warning: $pm-warn
+  )
+));

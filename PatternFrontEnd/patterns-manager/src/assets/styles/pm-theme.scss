@@ -1,0 +1,9 @@
+@import 'pm-theme-definition.scss';
+
+// IMPORT ONLY ONCE, AS ALL STYLES ARE BEING OUTPUT
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Include all theme styles for the components.
+@include angular-material-theme($pm-theme);
