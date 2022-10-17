@@ -1,0 +1,49 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using PatternsAPI.DAL.Context;
+using PatternsAPI.Models;
+
+namespace PatternsAPI.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class ValueDomainController : ControllerBase
+    {
+        private readonly ILogger<ValueDomainController> _logger;
+        private PatternsContext _ctx;
+        public ValueDomainController(ILogger<ValueDomainController> logger, PatternsContext ctx)
+        {
+            _logger = logger;
+            _ctx = ctx;
+        }
+
+        [HttpGet(Name = "GetValueDomains")]
+        public IEnumerable<ValueDomain> Get()
+        {
+            return (this._ctx.ValueDomains.ToList());
+        }
+
+        [HttpPost(Name = "PostValueDomain")]
+        public async Task<ActionResult<ValueDomain>> Post(ValueDomain vd)
+        {
+            _ctx.ValueDomains.Add(vd);
+            var createdId = await _ctx.SaveChangesAsync();
+            return CreatedAtAction("posted", new { id = createdId });
+
+        }
+
+        [HttpDelete(Name = "DeleteValueDomain/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var vd = await _ctx.ValueDomains.FindAsync(id);
+            if (vd == null)
+            {
+                return NotFound();
+            }
+
+            _ctx.ValueDomains.Remove(vd);
+            await _ctx.SaveChangesAsync();
+
+            return NoContent();
+        }
+    }
+}
