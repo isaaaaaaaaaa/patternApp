@@ -57,11 +57,11 @@ export class AddEditPatternComponent extends BaseAddEditComponent implements OnI
 
     this.patternCompaniesService.getAll().subscribe(res => {
       this.patternCompanies = res;
-      this.patternFormGroup.get('patternCompanyId')?.setValue(this.patternCompanies[0].id);
+      if(this.isAddMode) this.patternFormGroup.get('patternCompanyId')?.setValue(this.patternCompanies[0].id);
     });
     this.patternTypesService.getAll().subscribe(res => {
       this.patternTypes = res;
-      this.patternFormGroup.get('patternTypeId')?.setValue(this.patternTypes[0].id);
+      if(this.isAddMode) this.patternFormGroup.get('patternTypeId')?.setValue(this.patternTypes[0].id);
     });
 
     super.ngOnInit();

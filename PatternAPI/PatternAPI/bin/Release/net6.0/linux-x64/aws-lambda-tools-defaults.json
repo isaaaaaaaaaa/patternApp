@@ -5,8 +5,8 @@
   "function-runtime": "dotnet6",
   "function-memory-size": 256,
   "function-timeout": 30,
-  "function-handler": "PatternAPI",
-  "function-name": "patternapi",
+  "function-handler": "PatternsAPI",
+  "function-name": "patternsapi",
   "environment-variables": "ASPNETCORE_ENVIRONMENT=Development;SOMETHING_ELSE=SomeValue",
   "function-url-enable": true
 }
