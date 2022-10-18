@@ -1,0 +1,47 @@
+<mat-card fxLayout="column">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>{{isAddMode? "Add a pattern to the librairie" : "Edit a pattern" }}</h2>
+    </mat-card-title>
+    <span class="spacer"></span>
+  </mat-card-header>
+  <mat-card-content fxLayoutAlign="center end" fxFlex class="content-padding">
+    <mat-spinner diameter="55" color="accent" *ngIf="isLoading"></mat-spinner>
+    <ng-container *ngIf="!isLoading">
+      <form [formGroup]="patternFormGroup" fxLayout="row" (ngSubmit)="onSubmit()" id="myform" fxLayoutGap="15px">
+        <mat-form-field fxFlex appearance="fill" color="accent">
+          <mat-label>Name</mat-label>
+          <input formControlName="name" matInput>
+          <mat-error *ngIf="patternFormGroup.controls.name?.hasError('required')">
+            Required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex appearance="fill" color="accent">
+          <mat-label>Type</mat-label>
+          <mat-select formControlName="patternTypeId">
+            <ng-container *ngFor="let type of patternTypes">
+              <mat-option [value]="type.id">
+                {{type.name}}
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field fxFlex appearance="fill" color="accent">
+          <mat-label>Company</mat-label>
+          <mat-select formControlName="patternCompanyId">
+            <ng-container *ngFor="let company of patternCompanies">
+              <mat-option [value]="company.id">
+                {{company.name}}
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <!-- <pm-file-upload></pm-file-upload> -->
+      </form>
+    </ng-container>
+  </mat-card-content>
+  <mat-card-footer fxLayoutAlign="end end" fxLayoutGap="10px">
+    <button mat-raised-button color="accent" routerLink="/patterns">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" form="myform">Save</button>
+  </mat-card-footer>
+</mat-card>

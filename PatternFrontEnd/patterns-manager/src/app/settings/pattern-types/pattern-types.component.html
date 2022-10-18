@@ -2,17 +2,17 @@
     <mat-card-header>
         <mat-card-title class="title">Pattern types</mat-card-title>
         <span class="spacer"></span>
-        <button mat-raised-button color="accent">+ Add new</button>
+        <button mat-raised-button color="accent" routerLink="/settings/pattern-types/new">+ Add new</button>
     </mat-card-header>
     <mat-card-content fxLayoutAlign="center center" fxFlex>
-      <mat-spinner color="accent" *ngIf="isLoading"></mat-spinner>
+      <mat-spinner diameter="55" color="accent" *ngIf="isLoading"></mat-spinner>
       <ng-container *ngIf="!isLoading">
         <mat-list fxFlex="50">
           <mat-list-item *ngFor="let item of patternTypes">
             {{item.name}}
             <span class="spacer"></span>
-            <button mat-icon-button color="accent"><mat-icon>edit</mat-icon></button>
-            <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+            <button mat-icon-button color="accent" routerLink="/settings/pattern-types/{{item.id}}"><mat-icon>edit</mat-icon></button>
+            <button mat-icon-button color="warn" (click)="delete(item.id)"><mat-icon>delete</mat-icon></button>
           </mat-list-item>
         </mat-list>
       </ng-container>

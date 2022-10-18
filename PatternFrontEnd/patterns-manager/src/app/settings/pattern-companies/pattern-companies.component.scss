@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+@import "../../../assets/styles/pm-theme-definition.scss";
+
+.title {
+  color: mat-color($pm-primary,900);
+}
+
+.abbreviation {
+  color: mat-color($pm-accent,900);
+  font-weight: 800;
+}

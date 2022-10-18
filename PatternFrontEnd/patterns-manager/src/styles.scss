@@ -69,9 +69,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 	flex: 1 1 auto;
 }
 
+h2 {
+  font-family: "Delius Swash Caps";
+  color: mat-color($pm-accent);
+}
 
 .mat-card-title {
   font-family: "Delius Swash Caps";
   font-size: x-large;
   font-weight: 700;
+}
+
+.mat-card-footer {
+  padding: 10px;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: mat-color($pm-primary);
+  animation: spinner .8s linear infinite;
 }

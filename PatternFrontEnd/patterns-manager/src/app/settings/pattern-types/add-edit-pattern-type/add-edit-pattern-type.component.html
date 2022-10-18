@@ -1,1 +1,26 @@
-<p>add-edit-pattern-type works!</p>
+<mat-card fxLayout="column">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>{{isAddMode? "Create a new pattern type" : "Edit pattern type" }}</h2>
+    </mat-card-title>
+    <span class="spacer"></span>
+  </mat-card-header>
+  <mat-card-content fxLayoutAlign="center end" fxFlex>
+    <mat-spinner diameter="55" color="accent" *ngIf="isLoading"></mat-spinner>
+    <ng-container *ngIf="!isLoading">
+      <form [formGroup]="patternTypeFormGroup" fxLayout="row" (ngSubmit)="onSubmit()" id="myform">
+        <mat-form-field fxFlex appearance="fill" color="accent">
+          <mat-label>Name</mat-label>
+          <input formControlName="name" matInput>
+          <mat-error *ngIf="patternTypeFormGroup.controls.name?.hasError('required')">
+            Required
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </ng-container>
+  </mat-card-content>
+  <mat-card-footer fxLayoutAlign="end end" fxLayoutGap="10px">
+    <button mat-raised-button color="accent"  routerLink="/pattern-types">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" form="myform">Save</button>
+  </mat-card-footer>
+</mat-card>

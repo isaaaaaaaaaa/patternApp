@@ -11,7 +11,6 @@ public static class Dependencies
 
             services.AddDbContextPool<PatternsContext>(options => options.UseMySql(cs, ServerVersion.AutoDetect(cs)));
 
-
     }
 
 }

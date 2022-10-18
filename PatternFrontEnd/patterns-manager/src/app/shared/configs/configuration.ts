@@ -4,5 +4,7 @@ export interface Configuration {
   appName: string;
   environment:string;
   mockToken?: string;
-
+  awsAccessKeyID: string;
+  awsSecretAccessKeyID: string;
+  awsRegion: string;
 }

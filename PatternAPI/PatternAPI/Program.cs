@@ -1,13 +1,20 @@
+using PatternsAPI.DTOs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 Dependencies.ConfigureServices(builder.Configuration, builder.Services, builder.Environment.IsDevelopment());
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.SuppressAsyncSuffixInActionNames = false;
+});
 builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddAutoMapper((serviceProvider, config) => {
+    config.AddGlobalIgnore("CreationDateTime");
+    config.AddGlobalIgnore("LastUpdateDateTime");
+}, typeof(MappingProfile).Assembly);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

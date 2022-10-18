@@ -1,6 +1,20 @@
-<div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
-  <mat-card class="mat-elevation-z2" routerLink="/settings/pattern-types" fxLayout="column" fxLayoutAlign="center center">
-    <p class="icon-circle"><mat-icon>face</mat-icon></p>
+<div fxLayout="row" fxLayoutGap="15px" fxFlex="100%" fxFlex.gt-lg="50%">
+  <div fxLayout="row" fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" fxFlex>
+    <mat-card class="mat-elevation-z2" routerLink="/settings/pattern-types" fxLayout="column"
+      fxLayoutAlign="center center" fxFlex>
+      <p class="icon-circle">
+        <mat-icon>face</mat-icon>
+      </p>
       <h3>Pattern types</h3>
     </mat-card>
+  </div>
+  <div fxLayout="row" fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" fxFlex>
+    <mat-card class="mat-elevation-z2" routerLink="/settings/pattern-companies" fxLayout="column"
+      fxLayoutAlign="center center" fxFlex>
+      <p class="icon-circle">
+        <mat-icon>store_mall_directory</mat-icon>
+      </p>
+      <h3>Pattern companies</h3>
+    </mat-card>
+  </div>
 </div>

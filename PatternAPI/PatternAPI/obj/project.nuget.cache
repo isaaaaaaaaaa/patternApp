@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EljGgiRPSmkaWP7sbt58bv9UsMm7rwv1BhHg3VE41mC9C1VpCLGXTDKY2bw7cykeBbUMGKm3h6Hrzdh/FqqpiA==",
+  "dgSpecHash": "GcWsmFPjLjl9/Q3pnvLyQgWqEiH92CFLNcv3IHW3y04cbEgP4hcB9uon9DYynwMgHhva4zn15yITjIoudPCpGQ==",
   "success": true,
   "projectFilePath": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\PatternAPI\\PatternsAPI.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,10 @@
     "C:\\Users\\ibarrette\\.nuget\\packages\\amazon.lambda.logging.aspnetcore\\3.1.0\\amazon.lambda.logging.aspnetcore.3.1.0.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\amazon.lambda.runtimesupport\\1.8.1\\amazon.lambda.runtimesupport.1.8.1.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.3.0\\amazon.lambda.serialization.systemtextjson.2.3.0.nupkg.sha512",
+    "C:\\Users\\ibarrette\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\ibarrette\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\ibarrette\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.10\\microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512",

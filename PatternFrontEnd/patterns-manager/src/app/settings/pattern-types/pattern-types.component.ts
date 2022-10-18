@@ -12,11 +12,16 @@ export class PatternTypesComponent implements OnInit {
 
   patternTypes: PatternType[]= [];
   isLoading: boolean = false;
+
   constructor(
     private patternTypesService: PatternTypesService
   ) { }
 
   ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll(): void {
     this.isLoading = true;
     this.patternTypesService.getAll().subscribe(patternTypes => {
       this.patternTypes = patternTypes;
@@ -24,4 +29,14 @@ export class PatternTypesComponent implements OnInit {
     })
   }
 
+  delete(id:number|undefined): void {
+    if(id !== undefined) {
+      this.isLoading = true;
+      this.patternTypesService.delete(id).subscribe(res => {
+        this.isLoading = false;
+        this.getAll();
+      });
+    }
+
+  }
 }

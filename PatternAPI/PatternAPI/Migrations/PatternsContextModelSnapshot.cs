@@ -30,12 +30,15 @@ namespace PatternsAPI.Migrations
                     b.Property<DateTime>("CreationDateTime")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime?>("LastUpdateDateTime")
-                        .IsRequired()
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("LastUpdateDateTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(250)");
 
                     b.Property<int>("PatternCompanyId")
@@ -66,8 +69,7 @@ namespace PatternsAPI.Migrations
                     b.Property<DateTime>("CreationDateTime")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime?>("LastUpdateDateTime")
-                        .IsRequired()
+                    b.Property<DateTime>("LastUpdateDateTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Name")
@@ -92,8 +94,7 @@ namespace PatternsAPI.Migrations
                     b.Property<DateTime>("CreationDateTime")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime?>("LastUpdateDateTime")
-                        .IsRequired()
+                    b.Property<DateTime>("LastUpdateDateTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Name")
@@ -119,8 +120,7 @@ namespace PatternsAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<DateTime?>("LastUpdateDateTime")
-                        .IsRequired()
+                    b.Property<DateTime>("LastUpdateDateTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Name")
@@ -149,8 +149,7 @@ namespace PatternsAPI.Migrations
                     b.Property<int>("EntityId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("LastUpdateDateTime")
-                        .IsRequired()
+                    b.Property<DateTime>("LastUpdateDateTime")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Value")

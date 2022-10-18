@@ -5,8 +5,9 @@ import { AppInitService } from './app.init';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PatternsModule } from './patterns/patterns.module';
 import { SettingsModule } from './settings/settings.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -16,14 +17,15 @@ export function init_app(appLoadService: AppInitService) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    DashboardModule,
     HttpClientModule,
+    PatternsModule,
     SettingsModule,
     SharedModule
   ],
