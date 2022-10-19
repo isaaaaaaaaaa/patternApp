@@ -23,8 +23,9 @@ export class AddEditPatternTypeComponent
     name: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required],
-    }),
+    })
   });
+
   constructor(
     route: ActivatedRoute,
     private router: Router,

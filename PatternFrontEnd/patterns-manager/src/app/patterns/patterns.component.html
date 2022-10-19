@@ -9,18 +9,10 @@
     <div fxFlex="75%" fxLayout="column">
       <ng-container *ngIf="!isLoading" >
 
-
-
-        <!-- <div class="CheckBoxStyle">
-        <mat-checkbox  class="CheckBoxClass" value="RG" (change)="addFilter($event)">RG</mat-checkbox>
-      </div> -->
-
         <mat-form-field appearance="standard">
           <mat-label>Filter</mat-label>
           <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
         </mat-form-field>
-
-
 
 
         <table mat-table [dataSource]="patterns" class="mat-elevation-z8" fxFlex>

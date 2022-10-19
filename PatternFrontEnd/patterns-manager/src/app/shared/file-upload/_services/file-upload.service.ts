@@ -4,6 +4,7 @@ import { ConfigurationService } from './../../configs/configuration.service';
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
+import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
 @Injectable({
 providedIn: 'root'
@@ -17,6 +18,7 @@ private bucket!: S3Client;
 constructor(
   private http:HttpClient,
   private configs: ConfigurationService) {
+
 
   this.bucket = new S3Client(
     {
@@ -40,11 +42,24 @@ async upload(file: File):Promise<void> {
     ContentType: file.type
   };
 
+  const command = new PutObjectCommand(params);
+
 	try {
-    const response = await this.bucket.send(new PutObjectCommand(params));
-    console.log("SUCCESS", response);
-  } catch(error) {
-    console.log("FAILURE", error);
+    const preSignedURL = await getSignedUrl(this.bucket, command, { expiresIn: 3600});
+console.log(preSignedURL);
+    this.http.put(preSignedURL, file).subscribe({
+      next: (res) => {
+        console.log("SUCCESS", res);
+      },
+      error: (err) => {
+        console.log("FAILED", err);
+      },
+      complete: () => {
+        console.log("DONE")
+      }
+    })
+  } catch(err) {
+    console.log(err);
   }
 }
 }
