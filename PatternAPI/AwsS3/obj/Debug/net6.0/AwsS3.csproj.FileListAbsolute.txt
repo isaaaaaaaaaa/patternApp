@@ -1,0 +1,12 @@
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.csproj.AssemblyReference.cache
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.AssemblyInfoInputs.cache
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.AssemblyInfo.cs
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.csproj.CoreCompileInputs.cache
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\bin\Debug\net6.0\AwsS3.deps.json
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\bin\Debug\net6.0\AwsS3.dll
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\bin\Debug\net6.0\AwsS3.pdb
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.dll
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\refint\AwsS3.dll
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\AwsS3.pdb
+D:\Dev\Playground\PatternManager\PatternAPI\AwsS3\obj\Debug\net6.0\ref\AwsS3.dll

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { FileUploadService } from './_services/file-upload.service';
 
@@ -11,7 +11,8 @@ export class FileUploadComponent implements OnInit {
   // Variable to store shortLink from api response
   shortLink: string = '';
   loading: boolean = false; // Flag variable
-  file: File | null = null; // Variable to store file
+  @Input() file: File | null = null; // Variable to store file
+  @Output() fileChange = new EventEmitter<File>();
   fileName: string|undefined = '';
   // Inject service
   constructor(private fileUploadService: FileUploadService) {}
@@ -22,6 +23,7 @@ export class FileUploadComponent implements OnInit {
   onChange(event: any) {
     this.file = event.target.files[0];
     this.fileName = this.file?.name;
+    this.fileChange.emit(this.file!);
   }
 
   // OnClick of button Upload

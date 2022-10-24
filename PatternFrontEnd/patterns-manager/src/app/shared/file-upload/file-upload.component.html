@@ -3,9 +3,9 @@
     <button type="button" mat-raised-button (click)="fileInput.click()">Chose file</button>
     <div class="file-name">{{fileName}}</div>
     <input hidden (change)="onChange($event)" #fileInput type="file" id="file" accept="image/jpeg,image/bmp,image/png">
-    <button (click)="onUpload()" mat-raised-button color="primary" type="button">
+    <!-- <button (click)="onUpload()" mat-raised-button color="primary" type="button">
       Upload
-    </button>
+    </button> -->
   </div>
 
 </div>

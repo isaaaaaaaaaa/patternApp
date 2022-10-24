@@ -18,6 +18,7 @@ export class PatternsComponent implements OnInit {
 
   ngOnInit(): void {
     this.displayedColumns = [
+      'imgUrl',
       'name',
       'patternTypeName',
       'patternCompanyName',

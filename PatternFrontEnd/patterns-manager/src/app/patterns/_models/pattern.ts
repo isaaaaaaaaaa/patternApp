@@ -9,4 +9,5 @@ export interface Pattern extends Base {
   patternCompanyId?: number;
   patternCompany?: PatternCompany;
   imgUrl?: string;
+  imgFile?: any;
 }

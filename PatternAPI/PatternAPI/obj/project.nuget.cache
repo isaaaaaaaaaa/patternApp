@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GcWsmFPjLjl9/Q3pnvLyQgWqEiH92CFLNcv3IHW3y04cbEgP4hcB9uon9DYynwMgHhva4zn15yITjIoudPCpGQ==",
+  "dgSpecHash": "gwGKTG9VhOv/w8XggK1RBrYxR4YxUqVyRKtkmIsZDZ83eUdpNlaziCzPnM79DzeP0suQmPQpeO4m+Bl162PCCQ==",
   "success": true,
   "projectFilePath": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\PatternAPI\\PatternsAPI.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,8 @@
     "C:\\Users\\ibarrette\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.3.0\\amazon.lambda.serialization.systemtextjson.2.3.0.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\ibarrette\\.nuget\\packages\\awssdk.core\\3.7.100\\awssdk.core.3.7.100.nupkg.sha512",
+    "C:\\Users\\ibarrette\\.nuget\\packages\\awssdk.s3\\3.7.101\\awssdk.s3.3.7.101.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ibarrette\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",

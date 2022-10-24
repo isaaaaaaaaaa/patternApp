@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kAvpUqWX9bTf1SeoysFP7zrwt3sdmYi4Ijniy6njVyvDyPqC67/SL2xuf+6p3eikSeD/0a9EgBeA+n9a0Vo8VQ==",
+  "success": true,
+  "projectFilePath": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\AwsS3\\AwsS3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ibarrette\\.nuget\\packages\\awssdk.core\\3.7.100\\awssdk.core.3.7.100.nupkg.sha512",
+    "C:\\Users\\ibarrette\\.nuget\\packages\\awssdk.s3\\3.7.101\\awssdk.s3.3.7.101.nupkg.sha512"
+  ],
+  "logs": []
+}

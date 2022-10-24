@@ -1,3 +1,5 @@
+using AwsS3.Services;
+using AwsS3.Services.Interfaces;
 using PatternsAPI.DTOs;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,8 @@ builder.Services.AddAutoMapper((serviceProvider, config) => {
     config.AddGlobalIgnore("CreationDateTime");
     config.AddGlobalIgnore("LastUpdateDateTime");
 }, typeof(MappingProfile).Assembly);
+
+builder.Services.AddScoped(typeof(IStorageService), typeof(StorageService));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

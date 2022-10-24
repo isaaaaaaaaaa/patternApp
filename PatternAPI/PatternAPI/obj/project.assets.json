@@ -127,6 +127,27 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "AWSSDK.Core/3.7.100": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.S3/3.7.101": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.100, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -484,6 +505,19 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "AwsS3/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AWSSDK.S3": "3.7.101"
+        },
+        "compile": {
+          "bin/placeholder/AwsS3.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AwsS3.dll": {}
+        }
       }
     }
   },
@@ -639,6 +673,58 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "AWSSDK.Core/3.7.100": {
+      "sha512": "YS+BRSjLtiTSyT7S+1F+305mXU0qmWIXQ85RULMiPvA20/xp9zO9aOjfWQMAKaQb1vwLGsGuMN/AHmJEnx0K+w==",
+      "type": "package",
+      "path": "awssdk.core/3.7.100",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.100.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.S3/3.7.101": {
+      "sha512": "OQdYBO5yDoXHO2dVQllBKRxsg5jdlfixZX4j9+XA3VCpvFuLQoH/3yrVT/2VdMtTwosYMcf1qB9FbUAitos/jg==",
+      "type": "package",
+      "path": "awssdk.s3/3.7.101",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
+        "awssdk.s3.3.7.101.nupkg.sha512",
+        "awssdk.s3.nuspec",
+        "lib/net35/AWSSDK.S3.dll",
+        "lib/net35/AWSSDK.S3.pdb",
+        "lib/net35/AWSSDK.S3.xml",
+        "lib/net45/AWSSDK.S3.dll",
+        "lib/net45/AWSSDK.S3.pdb",
+        "lib/net45/AWSSDK.S3.xml",
+        "lib/netcoreapp3.1/AWSSDK.S3.dll",
+        "lib/netcoreapp3.1/AWSSDK.S3.pdb",
+        "lib/netcoreapp3.1/AWSSDK.S3.xml",
+        "lib/netstandard2.0/AWSSDK.S3.dll",
+        "lib/netstandard2.0/AWSSDK.S3.pdb",
+        "lib/netstandard2.0/AWSSDK.S3.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -1289,6 +1375,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "AwsS3/1.0.0": {
+      "type": "project",
+      "path": "../AwsS3/AwsS3.csproj",
+      "msbuildProject": "../AwsS3/AwsS3.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1297,6 +1388,7 @@
       "Amazon.Lambda.Core >= 2.1.0",
       "AutoMapper >= 12.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
+      "AwsS3 >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
@@ -1330,7 +1422,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\AwsS3\\AwsS3.csproj": {
+              "projectPath": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\AwsS3\\AwsS3.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

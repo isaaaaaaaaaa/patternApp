@@ -12,5 +12,6 @@
         public PatternCompanyDto? PatternCompany { get; set; }
         public string? PatternCompanyName  { get; set; }
         public string? ImgUrl { get; set; }
+        public IFormFile? imgFile { get; set; }
     }
 }

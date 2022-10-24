@@ -19,6 +19,7 @@ export class AddEditPatternComponent extends BaseAddEditComponent implements OnI
 
   patternTypes: PatternType[] = [];
   patternCompanies: PatternCompany[] = [];
+  imgFile: File | null = null;
   patternFormGroup = new FormGroup<ControlsOf<Pattern>>({
     id: new FormControl(0, {
       nonNullable: true,
@@ -35,10 +36,13 @@ export class AddEditPatternComponent extends BaseAddEditComponent implements OnI
       nonNullable: true,
       validators: [Validators.required],
     }),
-    imgUrl: new FormControl("TEMP", {
+    imgUrl: new FormControl("", {
       nonNullable: true,
       validators: [Validators.required],
     }),
+    imgFile: new FormControl(undefined, {
+      nonNullable: true,
+    })
   });
 
 
@@ -78,11 +82,12 @@ export class AddEditPatternComponent extends BaseAddEditComponent implements OnI
 
   onSubmit(): void {
     if (this.patternFormGroup.valid) {
+      this.patternFormGroup.get('imgFile')?.setValue(this.imgFile);
       this.isLoading = true;
       this.patternsService
         .updateCreate(
           this.patternFormGroup.get('id')?.value!,
-          this.patternFormGroup.getRawValue()
+          this.patternFormGroup.value
         )
         .subscribe((res) => {
           this.isLoading = false;

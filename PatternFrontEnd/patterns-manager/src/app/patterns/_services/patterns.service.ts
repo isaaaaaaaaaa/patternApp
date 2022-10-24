@@ -1,8 +1,10 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { ConfigurationService } from 'src/app/shared/configs/configuration.service';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Pattern } from '../_models/pattern';
+import { toFormData } from 'src/app/shared/_helpers/to-form-data';
 
 type NewType = Pattern;
 
@@ -28,10 +30,11 @@ export class PatternsService {
     );
   }
 
-  updateCreate(id:number, pattern: Pattern):Observable<any> {
+  updateCreate(id:number, pattern: any):Observable<any> {
+    const fd = toFormData(pattern);
     if(id===0) {
       return this.httpClient.post<any>(
-        this.configService.config?.devApiBaseUrl + `patterns`,pattern
+        this.configService.config?.devApiBaseUrl + `patterns`,fd
       );
     }
     return this.httpClient.put(

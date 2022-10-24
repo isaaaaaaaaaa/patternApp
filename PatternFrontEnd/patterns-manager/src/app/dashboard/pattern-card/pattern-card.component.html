@@ -1,0 +1,4 @@
+<mat-card fxLayoutAlign="center center" fxLayout="column" routerLink="/patterns/{{pattern.id}}">
+  <img mat-card-lg-image [src]="pattern.imgUrl !==''? pattern.imgUrl: '../../../assets/img/no_image.jpg'" width="125px">
+  <h2>{{pattern.name}}</h2>
+</mat-card>

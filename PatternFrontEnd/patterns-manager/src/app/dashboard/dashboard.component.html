@@ -1,1 +1,7 @@
-<button mat-raised-button color="accent" routerLink="/patterns">Ses all patterns</button>
+<button mat-raised-button color="accent" routerLink="/patterns">See all patterns</button>
+<div fxLayout="row wrap" fxLayoutGap="15px grid">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <ng-container *ngFor="let pattern of patterns">
+    <pm-pattern-card [pattern]="pattern"></pm-pattern-card>
+  </ng-container>
+</div>

@@ -12,6 +12,7 @@
           "Amazon.Lambda.Core": "2.1.0",
           "AutoMapper": "12.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "AwsS3": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.Design": "6.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.10",
@@ -131,6 +132,25 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.0.0"
+          }
+        }
+      },
+      "AWSSDK.Core/3.7.100": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.100.0"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.101": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.100"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.101.0"
           }
         }
       },
@@ -335,7 +355,15 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "AwsS3/1.0.0": {
+        "dependencies": {
+          "AWSSDK.S3": "3.7.101"
+        },
+        "runtime": {
+          "AwsS3.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -413,6 +441,20 @@
       "sha512": "sha512-XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.7.100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YS+BRSjLtiTSyT7S+1F+305mXU0qmWIXQ85RULMiPvA20/xp9zO9aOjfWQMAKaQb1vwLGsGuMN/AHmJEnx0K+w==",
+      "path": "awssdk.core/3.7.100",
+      "hashPath": "awssdk.core.3.7.100.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.101": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OQdYBO5yDoXHO2dVQllBKRxsg5jdlfixZX4j9+XA3VCpvFuLQoH/3yrVT/2VdMtTwosYMcf1qB9FbUAitos/jg==",
+      "path": "awssdk.s3/3.7.101",
+      "hashPath": "awssdk.s3.3.7.101.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
@@ -609,6 +651,11 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "AwsS3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
