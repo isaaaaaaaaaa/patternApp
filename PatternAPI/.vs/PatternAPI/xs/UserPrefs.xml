@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{D2DC87B5-3622-4CA9-9AAF-1D48920F13EF}|PatternAPI">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PatternAPI/Program.cs">
+    <Files>
+      <File FileName="PatternAPI/Dependencies.cs" Line="1" Column="1" />
+      <File FileName="PatternAPI/appsettings.json" Line="1" Column="1" />
+      <File FileName="PatternAPI/Program.cs" Line="1" Column="11" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PatternAPI" expanded="True">
+            <Node name="PatternsAPI" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="ProjectDependencies" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PatternsAPI PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>

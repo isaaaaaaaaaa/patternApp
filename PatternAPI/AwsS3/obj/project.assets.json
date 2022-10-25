@@ -85,26 +85,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ibarrette\\.nuget\\packages\\": {}
+    "/Users/isabellebarrette/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\AwsS3\\AwsS3.csproj",
+      "projectUniqueName": "/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/AwsS3/AwsS3.csproj",
       "projectName": "AwsS3",
-      "projectPath": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\AwsS3\\AwsS3.csproj",
-      "packagesPath": "C:\\Users\\ibarrette\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Playground\\PatternManager\\PatternAPI\\AwsS3\\obj\\",
+      "projectPath": "/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/AwsS3/AwsS3.csproj",
+      "packagesPath": "/Users/isabellebarrette/.nuget/packages/",
+      "outputPath": "/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/AwsS3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ibarrette\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/isabellebarrette/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -134,7 +133,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -143,7 +143,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

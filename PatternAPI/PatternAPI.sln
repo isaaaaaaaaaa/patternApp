@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternsAPI", "PatternAPI\PatternsAPI.csproj", "{D2DC87B5-3622-4CA9-9AAF-1D48920F13EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsS3", "AwsS3\AwsS3.csproj", "{BFBC0702-C45E-4C43-9513-A1BB3610D6C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D2DC87B5-3622-4CA9-9AAF-1D48920F13EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2DC87B5-3622-4CA9-9AAF-1D48920F13EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2DC87B5-3622-4CA9-9AAF-1D48920F13EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBC0702-C45E-4C43-9513-A1BB3610D6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBC0702-C45E-4C43-9513-A1BB3610D6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBC0702-C45E-4C43-9513-A1BB3610D6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBC0702-C45E-4C43-9513-A1BB3610D6C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
