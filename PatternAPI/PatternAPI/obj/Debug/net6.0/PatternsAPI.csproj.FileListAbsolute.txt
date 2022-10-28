@@ -100,3 +100,10 @@ D:/Dev/Playground/PatternManager/PatternAPI/PatternAPI/obj/Debug/net6.0/ref/Patt
 /Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/obj/Debug/net6.0/PatternsAPI.pdb
 /Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/obj/Debug/net6.0/PatternsAPI.genruntimeconfig.cache
 /Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/obj/Debug/net6.0/ref/PatternsAPI.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/isabellebarrette/Documents/playground/patternApp/PatternAPI/PatternAPI/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
