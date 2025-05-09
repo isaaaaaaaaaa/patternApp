@@ -2,7 +2,7 @@
   "apiBaseUrl": "https://localhost:7248/",
   "devApiBaseUrl": "api/",
   "environment": "local",
-  "awsAccessKeyID": "AKIAW7JVKWD2ANEZTE6O",
-  "awsSecretAccessKeyID": "egzRyUqA+YKyMdEwgm0VuQaiUagdVKcrGOm7Vv93",
+  "awsAccessKeyID": "****",
+  "awsSecretAccessKeyID": "****",
   "awsRegion": "us-east-1"
 }
